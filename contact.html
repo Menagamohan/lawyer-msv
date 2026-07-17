@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cabinet d'Avocat</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/2 - PNG/1 - LOGO CP.png" alt="Cabinet d'Avocat Logo" height="60" class="navbar-logo" onerror="this.src='https://via.placeholder.com/150x60?text=Logo'">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-animated" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-animated" href="about.html">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-animated active" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a href="#" class="btn btn-outline-primary btn-sm login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="fa-solid fa-user me-1"></i> Connexion
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="application.html" class="btn btn-secondary-custom">Commencer ma demande</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 bg-light text-center border-bottom">
+        <div class="container">
+            <h1 class="display-4 mt-4" style="color: var(--primary-color);">Contactez-Nous</h1>
+            <p class="lead text-muted mb-4">Une question sur la procédure ? Notre équipe est là pour vous répondre.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Envoyez-nous un message</h3>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Nom</label>
+                                <input type="text" class="form-control" placeholder="Votre nom" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="votre@email.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Sujet</label>
+                                <input type="text" class="form-control" placeholder="Sujet de votre demande" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-secondary-custom w-100">Envoyer le message <i class="fa-solid fa-paper-plane ms-2"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Informations de Contact</h3>
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="icon-wrapper bg-light text-primary me-3" style="width: 50px; height: 50px; flex-shrink: 0;">
+                            <i class="fa-solid fa-location-dot fs-4"></i>
+                        </div>
+                        <div>
+                            <h5>Adresse du Cabinet</h5>
+                            <p class="text-muted mb-0">12 Avenue des Champs-Élysées<br>75008 Paris, France</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="icon-wrapper bg-light text-primary me-3" style="width: 50px; height: 50px; flex-shrink: 0;">
+                            <i class="fa-solid fa-envelope fs-4"></i>
+                        </div>
+                        <div>
+                            <h5>Email</h5>
+                            <p class="text-muted mb-0">contact@cabinet-avocat.fr</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="icon-wrapper bg-light text-primary me-3" style="width: 50px; height: 50px; flex-shrink: 0;">
+                            <i class="fa-solid fa-phone fs-4"></i>
+                        </div>
+                        <div>
+                            <h5>Téléphone</h5>
+                            <p class="text-muted mb-0">+33 (0)1 23 45 67 89</p>
+                            <small class="text-muted">Lundi - Vendredi, 9h00 - 18h00</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <img src="assets/images/2 - PNG/1 - LOGO CP.png" alt="Logo" height="40" onerror="this.src='https://via.placeholder.com/100x40?text=Logo'" class="mb-2 bg-white p-1 rounded">
+                    <p class="small text-muted mb-0">&copy; 2026 Cabinet d'Avocat. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted small me-3 text-decoration-none footer-link">Mentions Légales</a>
+                    <a href="#" class="text-muted small me-3 text-decoration-none footer-link">Politique de Confidentialité</a>
+                    <a href="#" class="text-muted small text-decoration-none footer-link">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title w-100 text-center" id="loginModalLabel" style="color: var(--primary-color); font-weight: 700;">Connexion Espace Avocat</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="userId" class="form-label">Identifiant (User ID)</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-white"><i class="fa-solid fa-user text-muted"></i></span>
+                    <input type="text" class="form-control" id="userId" placeholder="Entrez votre identifiant" required>
+                </div>
+              </div>
+              <div class="mb-4">
+                <label for="password" class="form-label">Mot de passe</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-white"><i class="fa-solid fa-lock text-muted"></i></span>
+                    <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" required>
+                </div>
+              </div>
+              <div id="loginError" class="alert alert-danger d-none small p-2 text-center">Identifiant ou mot de passe incorrect.</div>
+              <button type="submit" class="btn btn-primary-custom w-100">Se connecter</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar Scroll Animation
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('mainNavbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Custom Login Logic
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const user = document.getElementById('userId').value;
+            const pass = document.getElementById('password').value;
+            const errorDiv = document.getElementById('loginError');
+            
+            // Customize ID and Password here
+            const validUser = "admin";
+            const validPass = "admin123";
+
+            if (user === validUser && pass === validPass) {
+                errorDiv.classList.add('d-none');
+                window.location.href = 'admin.html';
+            } else {
+                errorDiv.classList.remove('d-none');
+            }
+        });
+    </script>
+</body>
+</html>

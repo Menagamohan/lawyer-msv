@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Avocat - Tableau de Bord</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-light">
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar p-3 d-flex flex-column" style="width: 250px;">
+            <div class="text-center mb-4">
+                <img src="assets/images/2 - PNG/1 - LOGO CP.png" alt="Logo" class="img-fluid bg-white p-2 rounded" style="max-height: 80px;" onerror="this.src='https://via.placeholder.com/150x80?text=Logo'">
+                <h6 class="mt-3 text-white">Cabinet d'Avocat</h6>
+            </div>
+            
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i class="fa-solid fa-gauge me-2"></i> Tableau de bord
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-folder-open me-2"></i> Dossiers Clients
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-euro-sign me-2"></i> Paiements (Stripe)
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-file-pdf me-2"></i> Modèles PDF
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://via.placeholder.com/40" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>Me. Dupont</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item" href="#">Paramètres</a></li>
+                    <li><a class="dropdown-item" href="#">Profil</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-grow-1 p-4" style="height: 100vh; overflow-y: auto;">
+            
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-4 border-bottom">
+                <h1 class="h2" style="color: var(--primary-color); font-family: var(--font-sans);">Aperçu des Dossiers</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                        <i class="fa-solid fa-download me-1"></i> Exporter
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="stat-card stat-bg-1">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="text-uppercase mb-1">Nouveaux Dossiers</h6>
+                                <h2 class="mb-0">12</h2>
+                            </div>
+                            <i class="fa-solid fa-folder-plus fa-2x opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card stat-bg-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="text-uppercase mb-1">En cours de révision</h6>
+                                <h2 class="mb-0">8</h2>
+                            </div>
+                            <i class="fa-solid fa-pen-to-square fa-2x opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card stat-bg-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="text-uppercase mb-1">Dossiers Clôturés (Ce mois)</h6>
+                                <h2 class="mb-0">24</h2>
+                            </div>
+                            <i class="fa-solid fa-check-double fa-2x opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Applications Table -->
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0" style="color: var(--primary-color);">Dernières Demandes</h5>
+                    <div class="input-group" style="width: 250px;">
+                        <input type="text" class="form-control form-control-sm" placeholder="Rechercher...">
+                        <button class="btn btn-sm btn-outline-secondary" type="button"><i class="fa-solid fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Client (Prénom Actuel)</th>
+                                    <th>Prénom Souhaité</th>
+                                    <th>Motif</th>
+                                    <th>Statut</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#1042</td>
+                                    <td>Martin, Paul</td>
+                                    <td>Pablo</td>
+                                    <td>Francisation</td>
+                                    <td><span class="badge bg-warning text-dark">En attente</span></td>
+                                    <td>17/07/2026</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#dossierModal"><i class="fa-regular fa-eye"></i></button>
+                                        <button class="btn btn-sm btn-light text-primary"><i class="fa-solid fa-file-pdf"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#1041</td>
+                                    <td>Lefebvre, Marie</td>
+                                    <td>Maria</td>
+                                    <td>Usage prolongé</td>
+                                    <td><span class="badge bg-info">En révision</span></td>
+                                    <td>16/07/2026</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#dossierModal"><i class="fa-regular fa-eye"></i></button>
+                                        <button class="btn btn-sm btn-light text-primary"><i class="fa-solid fa-file-pdf"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#1040</td>
+                                    <td>Dubois, Jean-Pierre</td>
+                                    <td>Jean</td>
+                                    <td>Personnel</td>
+                                    <td><span class="badge bg-success">Clôturé</span></td>
+                                    <td>15/07/2026</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-light"><i class="fa-regular fa-eye"></i></button>
+                                        <button class="btn btn-sm btn-light text-primary"><i class="fa-solid fa-file-pdf"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer bg-white">
+                    <nav>
+                        <ul class="pagination pagination-sm justify-content-end mb-0">
+                            <li class="page-item disabled"><a class="page-link" href="#">Précédent</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal Dossier Detail -->
+    <div class="modal fade" id="dossierModal" tabindex="-1" aria-labelledby="dossierModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="dossierModalLabel" style="color: var(--primary-color);">Dossier #1042 - Martin, Paul</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <h6><i class="fa-regular fa-user me-2 text-muted"></i> Informations</h6>
+                            <p class="mb-1 small text-muted">Email: paul.martin@email.com</p>
+                            <p class="mb-1 small text-muted">Tel: 06 12 34 56 78</p>
+                            <p class="mb-1 small text-muted">Adresse: 12 rue de Paris, 75001 Paris</p>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <h6><i class="fa-solid fa-file-invoice me-2 text-muted"></i> Pièces jointes</h6>
+                            <a href="#" class="d-block small mb-1"><i class="fa-regular fa-file-pdf text-danger me-1"></i> CNI_RectoVerso.pdf</a>
+                            <a href="#" class="d-block small mb-1"><i class="fa-regular fa-file-pdf text-danger me-1"></i> Acte_Naissance.pdf</a>
+                            <a href="#" class="d-block small"><i class="fa-regular fa-file-pdf text-danger me-1"></i> Justificatif_Dom.pdf</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Motivations de l'intérêt légitime (Éditable par l'avocat)</label>
+                        <textarea class="form-control" rows="5">Le requérant souhaite franciser son prénom en "Pablo" pour des raisons d'intégration professionnelle et personnelle, prénom sous lequel il est connu dans son entourage depuis plus de 10 ans...</textarea>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Statut du dossier</label>
+                        <select class="form-select">
+                            <option value="pending" selected>En attente</option>
+                            <option value="review">En révision</option>
+                            <option value="approved">Approuvé (Génération PDF prête)</option>
+                            <option value="completed">Clôturé (Envoyé à la mairie)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-secondary-custom"><i class="fa-solid fa-file-pdf me-2"></i> Générer la Requête PDF</button>
+                    <button type="button" class="btn btn-primary-custom">Sauvegarder les modifications</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
